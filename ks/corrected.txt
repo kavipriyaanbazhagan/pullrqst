@@ -49,7 +49,7 @@ else
 	printf("\n The given string is not a palindrome");
   }
 }
-void sortAlphaOrder ()	       //function to arrange a string in alphabetical order
+void sortAlphaOrder (void)	       //function to arrange a string in alphabetical order
 {
 char ch1,output[100];
 int no[26]={0},n,c,t,x;
@@ -86,6 +86,17 @@ void reverse(char *str1)
 	} while (1)
 
 }
+/*********************************************************
+Return type:void
+Description: to find the string length
+*******************************************************///
+void calcstringlen(void)
+{
+int n;
+n=strlen(srt);
+printf("\n the length of the string %d",n);
+}
+
 void main()
 {
 int n_choice;
@@ -96,6 +107,7 @@ scanf("%s",str);
 	printf("\n2.Palindrome");
 	printf("\n3.Arrange the string in alphabetical order");
 	printf("\n4.Reverse using recursion");
+	printf("\n5.string length");
 printf("\n Enter the choice");
 scanf("%d",&choice);
 switch(choice)
@@ -112,7 +124,11 @@ switch(choice)
 	case 4: printf("\n 4.Reverse");
 		reverse(str);
 		break;
-	default: printf("\n Wrong choice");
+	case 5:printf("\n 5. string length");
+	       calcstringlen();
+	       break;
+	     
+       default: printf("\n Wrong choice");
   }
 getch();
 }
